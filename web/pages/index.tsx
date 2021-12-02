@@ -14,7 +14,7 @@ const Home: NextPage = () => {
           </p>
           <div className="mt-5 text-center">
             <Link href="/">
-              <a className="bg-red-500 hover:bg-red-700 text-blod text-2xl px-6 py-2 rounded-md flex w-2/6 m-auto text-center justify-center">
+              <a className="bg-red-500 shadow-btn hover:bg-red-700 text-blod text-2xl px-6 py-2 rounded-md flex w-2/6 m-auto text-center justify-center">
                 <div className="pr-2">
                   <svg
                     version="1.1"
@@ -52,7 +52,7 @@ const Home: NextPage = () => {
             <Link href="https://github.com/kai63001/scura-mode">
               <a
                 target="_blank"
-                className="bg-darkwhite hover:bg-gray-800 text-blod text-lg px-6 py-2 rounded-md flex justify-center w-2/6 mr-3"
+                className="bg-darkwhite shadow-btn hover:bg-gray-800 text-blod text-lg px-6 py-2 rounded-md flex justify-center w-2/6 mr-3"
               >
                 <svg
                   width="24px"
@@ -85,7 +85,7 @@ const Home: NextPage = () => {
             <Link href="/">
               <a
                 target="_blank"
-                className="bg-darkwhite hover:bg-gray-800 text-blod text-lg px-6 py-2 rounded-md flex justify-center w-2/6"
+                className="bg-darkwhite shadow-btn hover:bg-gray-800 text-blod text-lg px-6 py-2 rounded-md flex justify-center w-2/6"
               >
                 <svg
                   width="20px"
