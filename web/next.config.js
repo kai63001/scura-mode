@@ -1,9 +1,10 @@
+const isProd = process.env.NODE_ENV === "production";
 
 module.exports = {
-  assetPrefix: "/scura-mode",
-  target: 'serverless',
+  assetPrefix: isProd ? "/scura-mode" : "",
+  target: "serverless",
   images: {
-    loader: 'imgix',
-    path: '/web',
+    loader: "imgix",
+    path: "/web",
   },
-}
+};

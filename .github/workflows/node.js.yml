@@ -20,7 +20,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: Install and Build 🔧
-        run: cd web && npm install && npm run build && npm run export
+        run: cd web && touch .env.local && echo NODE_ENV=production >> .env.local && npm install && npm run build && npm run export
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
