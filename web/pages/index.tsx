@@ -64,9 +64,9 @@ const Home: NextPage = () => {
                 <g
                   id="brand"
                   stroke="none"
-                  stroke-width="1"
+                  strokeWidth="1"
                   fill="#ffff"
-                  fill-rule="evenodd"
+                  fillRule="evenodd"
                 >
                   <g id="github" fill="#000000">
                     <path
