@@ -1,10 +1,9 @@
-const isProd = process.env.NODE_ENV === "production";
 
 module.exports = {
-  assetPrefix: isProd ? "/scura-mode" : "/",
+  assetPrefix: "/scura-mode",
   target: 'serverless',
   exportPathMap: () => ({
-    "/": {
+    "/scura-mode": {
       page: "/",
     },
   }),
