@@ -1,0 +1,34 @@
+name: Scucar CI/CD PUSH
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+before_script:
+  - cd web/
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [14.x]
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install and Build 🔧
+        run: npm install && npm run build && npm run export
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@3.7.1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages 
+          FOLDER: out
+          CLEAN: true
