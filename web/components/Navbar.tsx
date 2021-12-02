@@ -11,8 +11,14 @@ const Navbar = () => {
     <nav className="fixed w-screen">
       <ul className="flex justify-center mt-5">
         {data.map((res, i) => (
-          <li className={router.asPath == res["link"] ? "mr-6 border-b-2 border-red-400" : "mr-6"}>
-            <Link href={res["name"].toLowerCase()}>
+          <li
+            className={
+              router.asPath == res["link"]
+                ? "mr-6 border-b-2 border-red-400"
+                : "mr-6"
+            }
+          >
+            <Link href={res["link"].toLowerCase()}>
               <a>{res["name"]}</a>
             </Link>
           </li>
