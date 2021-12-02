@@ -12,6 +12,7 @@ const Navbar = () => {
       <ul className="flex justify-center mt-5">
         {data.map((res, i) => (
           <li
+            key={i}
             className={
               router.asPath == res["link"]
                 ? "mr-6 border-b-2 border-red-400"
