@@ -4,7 +4,7 @@ module.exports = {
   target: 'serverless',
   exportPathMap: () => ({
     "/": {
-      page: "/",
+      page: "/index",
     },
   }),
   images: {
