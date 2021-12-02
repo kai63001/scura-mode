@@ -4,7 +4,7 @@ module.exports = {
   target: 'serverless',
   exportPathMap: () => ({
     "/scura-mode": {
-      page: "/",
+      page: "/web",
     },
   }),
   images: {
