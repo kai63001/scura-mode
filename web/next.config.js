@@ -3,8 +3,8 @@ const isProd = process.env.NODE_ENV === "production";
 module.exports = {
   target: 'serverless',
   exportPathMap: () => ({
-    "/scura-mode": {
-      page: "/web",
+    "/web": {
+      page: "/scura-mode",
     },
   }),
   images: {
