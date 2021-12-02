@@ -15,7 +15,7 @@
             "all_frames": true,
             "match_about_blank": true,
             "matches": ["<all_urls>"],
-            "run_at": "document_end",
+            "run_at": "document_start",
             "exclude_globs": ["*/chrome/newtab*"],
             "js": ["js/darkmode.content.js"]
         },
