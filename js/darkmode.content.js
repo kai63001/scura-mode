@@ -1,10 +1,17 @@
 const head =
   document.documentElement || document.head || document.querySelector("head");
+let onOrOff = true;
+chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
+  if (request.message === "start") {
+    turnOfforOn();
+  }
+});
+const nowUrl = window.location.hostname;
 
 const customSite = (site) => {
   const siteList = {
     "wikipedia.org": "wikipedia",
-    "stackoverflow": "stackoverflow",
+    stackoverflow: "stackoverflow",
   };
   for (const [key, value] of Object.entries(siteList)) {
     if (site.indexOf(key) >= 0) {
@@ -12,6 +19,17 @@ const customSite = (site) => {
     }
   }
   return "";
+};
+
+const turnOfforOn = () => {
+  const link = document.getElementById(customSite(nowUrl) + "-custom-css");
+  if(onOrOff == true){
+    head.removeChild(link)
+    onOrOff = false;
+  }else{
+    main();
+    onOrOff = true;
+  }
 };
 
 const linkCreate = (path) => {
@@ -28,7 +46,6 @@ const linkCreate = (path) => {
 };
 
 const main = () => {
-  const nowUrl = window.location.hostname;
   linkCreate(customSite(nowUrl));
 };
 
