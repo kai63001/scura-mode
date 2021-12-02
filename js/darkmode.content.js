@@ -11,7 +11,7 @@ const nowUrl = window.location.hostname;
 const customSite = (site) => {
   const siteList = {
     "wikipedia.org": "wikipedia",
-    stackoverflow: "stackoverflow",
+    "stackoverflow": "stackoverflow",
   };
   for (const [key, value] of Object.entries(siteList)) {
     if (site.indexOf(key) >= 0) {
@@ -23,10 +23,10 @@ const customSite = (site) => {
 
 const turnOfforOn = () => {
   const link = document.getElementById(customSite(nowUrl) + "-custom-css");
-  if(onOrOff == true){
-    head.removeChild(link)
+  if (onOrOff == true) {
+    head.removeChild(link);
     onOrOff = false;
-  }else{
+  } else {
     main();
     onOrOff = true;
   }
