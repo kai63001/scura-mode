@@ -8,7 +8,6 @@ module.exports = {
     },
   }),
   images: {
-    loader: 'imgix',
-    path: "/web"
+    loader: 'imgix'
   },
 }
