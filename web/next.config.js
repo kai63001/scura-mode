@@ -3,8 +3,8 @@ module.exports = {
   assetPrefix: "/scura-mode",
   target: 'serverless',
   exportPathMap: () => ({
-    "/": {
-      page: "/index",
+    "/index": {
+      page: "/",
     },
   }),
   images: {
