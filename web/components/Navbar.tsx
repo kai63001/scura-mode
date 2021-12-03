@@ -6,6 +6,7 @@ const Navbar = () => {
   const data = [
     { link: "/", name: "HOME" },
     { link: "/install", name: "INSTALL" },
+    { link: "/donate", name: "DONATE" },
   ];
   return (
     <nav className="fixed w-screen">
