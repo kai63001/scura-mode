@@ -13,7 +13,7 @@ const Home: NextPage = () => {
             (browser) to dark at night time.
           </p>
           <div className="mt-5 text-center">
-            <Link href="/">
+            <Link href="/install">
               <a className="bg-red-500 shadow-btn hover:bg-red-700 text-blod text-2xl px-6 py-2 rounded-md flex w-2/6 m-auto text-center justify-center">
                 <div className="pr-2">
                   <svg
