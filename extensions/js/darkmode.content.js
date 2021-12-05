@@ -1,6 +1,8 @@
 const head =
   document.documentElement || document.head || document.querySelector("head");
 let onOrOff = true;
+const nowUrl = window.location.hostname;
+
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
   if (request.message === "start") {
     turnOfforOn();
@@ -10,12 +12,11 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
     });
   }
 });
-const nowUrl = window.location.hostname;
 
 const customSite = (site) => {
   const siteList = {
     "wikipedia.org": "wikipedia",
-    stackoverflow: "stackoverflow",
+    "stackoverflow.com": "stackoverflow",
   };
   for (const [key, value] of Object.entries(siteList)) {
     if (site.indexOf(key) >= 0) {
@@ -67,5 +68,6 @@ const main = async () => {
     }
   });
 };
+
 
 main();
