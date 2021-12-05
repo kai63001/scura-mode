@@ -1,34 +1,42 @@
 {
-    "name": "Scura mode",
-    "description": "Turn you browser to the dark mode",
-    "version": "1.0.0.0",
-    "manifest_version": 3,
-    "action": {
-      "default_popup": "html/popup.html"
+  "name": "Scura mode",
+  "description": "Turn you browser to the dark mode",
+  "version": "1.0.0.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "html/popup.html"
+  },
+  "permissions": ["storage"],
+  "web_accessible_resources": [
+    {
+      "resources": ["css/*.css"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "content_scripts": [
+    {
+      "all_frames": true,
+      "match_about_blank": true,
+      "matches": ["<all_urls>"],
+      "run_at": "document_start",
+      "exclude_globs": ["*/chrome/newtab*"],
+      "js": ["js/darkmode.content.js"]
     },
-    "permissions": [
-      "storage"
-    ],
-    "web_accessible_resources": [{
-        "resources": ["css/*.css"],
-        "matches": ["<all_urls>"]
-      }],
-    "content_scripts": [
-        {
-            "all_frames": true,
-            "match_about_blank": true,
-            "matches": ["<all_urls>"],
-            "run_at": "document_start",
-            "exclude_globs": ["*/chrome/newtab*"],
-            "js": ["js/darkmode.content.js"]
-        },
-        {
-            "all_frames": true,
-            "match_about_blank": true,
-            "matches": ["<all_urls>"],
-            "run_at": "document_start",
-            "exclude_globs": ["*/chrome/newtab*"],
-            "css": ["css/scroll.css"]
-        }
-      ]
-  }
+    {
+      "all_frames": true,
+      "match_about_blank": true,
+      "matches": ["<all_urls>"],
+      "run_at": "document_end",
+      "exclude_globs": ["*/chrome/newtab*"],
+      "js": ["js/darkmode.background.js"]
+    },
+    {
+      "all_frames": true,
+      "match_about_blank": true,
+      "matches": ["<all_urls>"],
+      "run_at": "document_start",
+      "exclude_globs": ["*/chrome/newtab*"],
+      "css": ["css/scroll.css"]
+    }
+  ]
+}
