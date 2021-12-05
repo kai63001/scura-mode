@@ -18,7 +18,7 @@ const customSite = (site) => {
       return value;
     }
   }
-  return "";
+  return "global";
 };
 
 const turnOfforOn = () => {
