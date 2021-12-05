@@ -1,10 +1,14 @@
-html,
 body {
-  background: #282828 !important;
-  color: #fff !important;
+  background: #282828;
+  color: #fff;
   font-family: "Outfit", sans-serif !important;
   font-display: swap !important;
   width: 300px;
+}
+
+.white {
+  background: #fff;
+  color: #282828;
 }
 
 .text-center {

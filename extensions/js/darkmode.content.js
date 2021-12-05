@@ -4,6 +4,10 @@ let onOrOff = true;
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
   if (request.message === "start") {
     turnOfforOn();
+    chrome.tabs.query({ currentWindow: true, active: true }, function (tabs) {
+      var activeTab = tabs[0];
+      chrome.tabs.sendMessage(activeTab.id, { message: onOrOff });
+    });
   }
 });
 const nowUrl = window.location.hostname;
@@ -11,7 +15,7 @@ const nowUrl = window.location.hostname;
 const customSite = (site) => {
   const siteList = {
     "wikipedia.org": "wikipedia",
-    "stackoverflow": "stackoverflow",
+    stackoverflow: "stackoverflow",
   };
   for (const [key, value] of Object.entries(siteList)) {
     if (site.indexOf(key) >= 0) {
@@ -26,9 +30,15 @@ const turnOfforOn = () => {
   if (onOrOff == true) {
     head.removeChild(link);
     onOrOff = false;
+    chrome.storage.sync.set({ onOrOff: false }, function () {
+      console.log("Value is set to " + false);
+    });
   } else {
     main();
     onOrOff = true;
+    chrome.storage.sync.set({ onOrOff: true }, function () {
+      console.log("Value is set to " + true);
+    });
   }
 };
 
@@ -45,8 +55,17 @@ const linkCreate = (path) => {
   }
 };
 
-const main = () => {
-  linkCreate(customSite(nowUrl));
+const main = async () => {
+  await chrome.storage.sync.get(["onOrOff"], function (result) {
+    if (result.onOrOff == undefined) {
+      onOrOff = true;
+    } else {
+      onOrOff = result.onOrOff;
+    }
+    if (onOrOff) {
+      linkCreate(customSite(nowUrl));
+    }
+  });
 };
 
 main();

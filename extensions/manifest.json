@@ -6,6 +6,9 @@
     "action": {
       "default_popup": "html/popup.html"
     },
+    "permissions": [
+      "storage"
+    ],
     "web_accessible_resources": [{
         "resources": ["css/*.css"],
         "matches": ["<all_urls>"]
