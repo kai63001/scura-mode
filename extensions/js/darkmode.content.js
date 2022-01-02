@@ -17,6 +17,7 @@ const customSite = (site) => {
   const siteList = {
     "wikipedia.org": "wikipedia",
     "stackoverflow.com": "stackoverflow",
+    "amazon.com": "amazon",
   };
   for (const [key, value] of Object.entries(siteList)) {
     if (site.indexOf(key) >= 0) {
