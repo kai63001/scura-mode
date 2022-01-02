@@ -145,6 +145,9 @@
   .NotifsNavItem .NotifsNavBadge {
     color: #c0c0c0 !important;
   }
+  .q-box {
+    background-color: #000 !important;
+  }
   .faded, .add_upvote, .add_upvote .count, .remove_upvote,
   .remove_upvote .count, .table_cell_wrapper a span {
     color: #949494 !important;

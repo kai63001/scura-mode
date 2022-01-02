@@ -18,6 +18,9 @@ const customSite = (site) => {
     "wikipedia.org": "wikipedia",
     "stackoverflow.com": "stackoverflow",
     "amazon.com": "amazon",
+    "github.com": "github",
+    "google.com": "google",
+    "youtube.com": "google",
   };
   for (const [key, value] of Object.entries(siteList)) {
     if (site.indexOf(key) >= 0) {
