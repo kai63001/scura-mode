@@ -13,6 +13,7 @@ const backlist = {
 const backgroundCheckSite = (site) => {
   for (const [key, value] of Object.entries(backlist)) {
     if (site.indexOf(key) >= 0) {
+      console.log("gogogo")
       goToDarkMode(value);
       return value;
     }
