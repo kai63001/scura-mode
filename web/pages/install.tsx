@@ -16,7 +16,7 @@ const Home: NextPage = () => {
             for Firefox and all Chromium browsers (Chrome/Edge/Opera/Brave).
           </p>
           <div className="flex justify-center mt-5">
-            <Link href="/">
+            <Link href="https://chrome.google.com/webstore/detail/scura-mode/pgaegelaihdicciddcjhelmmknmpfcgk?hl=th&authuser=0">
               <a
                 target="_blank"
                 className="bg-darkwhite shadow-btn hover:bg-gray-800 text-blod text-lg px-6 py-2 rounded-md flex justify-center w-1/6 mr-3"
@@ -73,7 +73,7 @@ const Home: NextPage = () => {
                 CHROME
               </a>
             </Link>
-            <Link href="/">
+            <Link href="https://chrome.google.com/webstore/detail/scura-mode/pgaegelaihdicciddcjhelmmknmpfcgk?hl=th&authuser=0">
               <a
                 target="_blank"
                 className="bg-darkwhite shadow-btn hover:bg-gray-800 text-blod text-lg px-6 py-2 rounded-md flex justify-center w-1/6 mr-3"
@@ -93,7 +93,7 @@ const Home: NextPage = () => {
                 EDGE
               </a>
             </Link>
-            <Link href="/">
+            <Link href="https://chrome.google.com/webstore/detail/scura-mode/pgaegelaihdicciddcjhelmmknmpfcgk?hl=th&authuser=0">
               <a
                 target="_blank"
                 className="bg-darkwhite shadow-btn hover:bg-gray-800 text-blod text-lg px-6 py-2 rounded-md flex justify-center w-1/6 mr-3"
@@ -115,7 +115,7 @@ const Home: NextPage = () => {
                 BRAVE
               </a>
             </Link>
-            <Link href="/">
+            <Link href="https://chrome.google.com/webstore/detail/scura-mode/pgaegelaihdicciddcjhelmmknmpfcgk?hl=th&authuser=0">
               <a
                 target="_blank"
                 className="bg-darkwhite shadow-btn hover:bg-gray-800 text-blod text-lg px-6 py-2 rounded-md flex justify-center w-1/6 mr-3"
@@ -135,7 +135,7 @@ const Home: NextPage = () => {
                 EDGE
               </a>
             </Link>
-            <Link href="/">
+            <Link href="https://chrome.google.com/webstore/detail/scura-mode/pgaegelaihdicciddcjhelmmknmpfcgk?hl=th&authuser=0">
               <a
                 target="_blank"
                 className="bg-darkwhite shadow-btn hover:bg-gray-800 text-blod text-lg px-6 py-2 rounded-md flex justify-center w-1/6 mr-3"
